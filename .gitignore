@@ -3,14 +3,11 @@ node_modules/*
 coverage/*
 out/
 out/*
-build/
-build/*
 .lock-wscript
 Makefile.gyp
 *.swp
 *.Makefile
 *.target.gyp.mk
-*.node
 *.sln
 *.sdf
 *.vcxproj
