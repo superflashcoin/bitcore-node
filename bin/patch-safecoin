@@ -1,0 +1,22 @@
+#!/bin/bash
+
+root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
+options=`cat ${root_dir}/bin/config_options.sh`
+depends_dir=$($root_dir/bin/variables.sh depends_dir)
+host=$(${root_dir}/bin/variables.sh host)
+btc_dir="${root_dir}/libbitcoind"
+
+cd "$root_dir"
+
+dir="${root_dir}/libbitcoind"
+
+patch_file="$(pwd)/etc/safecoin.patch"
+
+cd "$dir" || exit 1
+
+
+patch -p1 < "$patch_file" || exit 1
+
+
+echo 'Patch completed successfully.'
+exit 0
