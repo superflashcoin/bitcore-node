@@ -8,7 +8,6 @@ Makefile.gyp
 *.swp
 *.Makefile
 *.target.gyp.mk
-*.node
 *.sln
 *.sdf
 *.vcxproj
